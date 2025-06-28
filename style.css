@@ -1,0 +1,232 @@
+/* General Body Styles */
+body {
+    font-family: 'Inter', Arial, sans-serif; /* Inter font ka upyog karein */
+    margin: 0;
+    padding: 0;
+    /* Images se prerit gradient background */
+    background: linear-gradient(to right, #4a0070, #ad5389);
+    color: #f0f0f0; /* Halka text color */
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+.main-header {
+    background-color: rgba(0, 0, 0, 0.3); /* Halka transparent background */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-header .logo {
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.main-header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    font-size: 2.2em;
+    color: #fff;
+}
+
+.main-header .tagline {
+    font-style: italic;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+/* Sections */
+section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: radial-gradient(circle at top right, rgba(173, 83, 137, 0.3), transparent);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.hero-section .stats {
+    margin-top: 25px;
+    font-size: 1.1em;
+    color: #e0e0e0;
+}
+
+.hero-section .stats span {
+    margin: 0 15px;
+    display: inline-block;
+}
+
+/* Grid Layout for Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Course Cards */
+.course-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px; /* Rounded corners */
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.course-card h3 {
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.course-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.course-card li {
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #e0e0e0;
+}
+
+/* Specific card colors inspired by images */
+.html-card {
+    background: linear-gradient(135deg, #ffc0cb, #ffe4e1); /* Pinkish gradient */
+    color: #333;
+}
+.html-card h3, .html-card li { color: #333; }
+
+.css-card {
+    background: linear-gradient(135deg, #add8e6, #87ceeb); /* Bluish gradient */
+    color: #333;
+}
+.css-card h3, .css-card li { color: #333; }
+
+.js-card {
+    background: linear-gradient(135deg, #98fb98, #c6f6d5); /* Greenish gradient */
+    color: #333;
+}
+.js-card h3, .js-card li { color: #333; }
+
+/* Mission Control Section */
+.mission-control-section {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px 0;
+    margin-top: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Smaller screens par wrap hone de */
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn {
+    background-color: #e74c3c; /* Red color */
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: #8e44ad; /* Purple color */
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: #6c3483;
+    transform: translateY(-2px);
+}
+
+.mission-log {
+    margin-top: 25px;
+    font-size: 1em;
+    color: #ccc;
+}
+
+#missionInteractions {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Footer */
+.main-footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+    color: #ccc;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 1.8em;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Smaller screens par columns ko stack karein */
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 80%; /* Smaller screens par buttons ko zyada wide karein */
+        margin: 0 auto 15px auto; /* Center karein aur spacing add karein */
+    }
+}
